@@ -28,7 +28,7 @@
     background: var(--color-main);
   }
 
-  .hamburger span:hover {
+  .hamburger:hover span {
     background: var(--color-yellow);
   }
 </style>
