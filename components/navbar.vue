@@ -1,0 +1,20 @@
+<script setup lang="ts">
+
+import V_logo from "public/svg/V_logo.vue";
+import Hamburger from "~/components/menu/hamburger.vue";
+</script>
+
+<template>
+  <nav class="flex content-center items-center p-15 justify-between">
+    <div class="w-[45px] h-[45px] hover:text-yellow content-center">
+      <v_logo/>
+    </div>
+    <div>
+      <hamburger/>
+    </div>
+  </nav>
+</template>
+
+<style scoped>
+
+</style>

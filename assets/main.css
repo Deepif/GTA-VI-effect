@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+@theme {
+    --color-main: #ffff;
+    --color-dark: #15141E;
+    --color-pink: #FFB0C4;
+    --color-yellow: #FFF9CB;
+    --color-orange: #FDAC7D;
+    --color-red: #F66860;
+
+    --font-helvetica : "Helvetica Neue", sans-serif;
+    --font-weight-title: 900;
+    --font-weight-regular: 500;
+    --font-weight-light: 300;
+}
+
+body, html {
+    font-family: "Helvetica Neue", sans-serif;
+    background: var(--color-dark);
+    color: var(--color-main);
+}
