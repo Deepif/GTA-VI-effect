@@ -5,9 +5,11 @@ import Hamburger from "~/components/menu/hamburger.vue";
 </script>
 
 <template>
-  <nav class="flex content-center items-center p-15 justify-between">
+  <nav class="flex content-center items-center p-15 justify-between fixed w-full">
     <div class="w-[45px] h-[45px] hover:text-yellow content-center">
-      <v_logo/>
+      <NuxtLink to="/">
+        <v_logo/>
+      </NuxtLink>
     </div>
     <div>
       <hamburger/>

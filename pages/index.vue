@@ -3,8 +3,7 @@
 </script>
 
 <template>
-  <div>
-  </div>
+  <hero/>
 </template>
 
 <style scoped>
