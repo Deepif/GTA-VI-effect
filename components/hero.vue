@@ -15,9 +15,10 @@ import Xbox_logo from "assets/xbox_logo.vue";
       <img src="/img/logo.png" alt="logo of Grand Theft Auto VI">
     </div>
 
-
-    <div class="fill-pink size-8 rotate-180">
-      <arrow/>
+    <div class="scroll_container">
+      <div class="fill-pink size-8 rotate-180">
+        <arrow/>
+      </div>
     </div>
 
     <div class="fade_overlay">
@@ -35,10 +36,10 @@ import Xbox_logo from "assets/xbox_logo.vue";
         <img src="/img/vi_logo.webp" alt=""/>
       </div>
       <h1>Available May 26, 2026</h1>
-      <div class="output_supports fill-main">
-        <ps5_logo/>
-        <xbox_logo/>
-      </div>
+    </div>
+    <div class="output_supports fill-main">
+      <ps5_logo/>
+      <xbox_logo/>
     </div>
   </section>
   <section class="outro">
@@ -94,4 +95,64 @@ import Xbox_logo from "assets/xbox_logo.vue";
    height: auto;
    object-fit: contain;
  }
+
+ .scroll_container {
+   position: absolute;
+   bottom: 10%;
+   left: 50%;
+   transform: translateX(-50%);
+   will-change: opacity;
+ }
+
+ .fade_overlay {
+   background-color: var(--color-main);
+   will-change: opacity;
+ }
+
+ .overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   transform-origin: center 15%;
+   width: 100%;
+   height: 250%;
+   z-index: 1;
+ }
+
+ .logo_container {
+   position: fixed;
+   top: 25%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 200px;
+   height: 150px;
+   z-index: 2;
+ }
+
+.content_overlay {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.logo_overlay {
+  position: absolute;
+  bottom: 25%;
+}
+
+.content_overlay h1 {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform-origin: center;
+}
+
+.outro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
