@@ -1,37 +1,57 @@
-<script setup lang="ts">
+<script setup lang="js">
 
 import Arrow from "assets/arrow.vue";
 import rect_svg from "~/assets/rect_svg.vue";
 import Ps5_logo from "assets/ps5_logo.vue";
 import Xbox_logo from "assets/xbox_logo.vue";
+import {onMounted, ref} from 'vue'
+import gsap from "gsap";
+import {logoData} from "assets/gta_6_logo_white.vue";
+
+
+const heroContainer = ref(null)
+const heroImgLogo = ref(null)
+const scrollCont = ref(null)
+const fadeOverlay = ref(null)
+const logoOverlay = ref(null)
+const outro = ref(null)
+const logoContainer = ref(null)
+const logoMask = ref(null)
+const initialOverlayScale = 350
+
+onMounted(() => {
+
+})
+
+
 </script>
 
 <template>
   <section class="hero">
-    <div class="hero_img_container">
+    <div class="hero_img_container" ref="heroContainer">
       <img src="/img/1.jpg" alt="artwork of Lucia and Jason"/>
     </div>
-    <div class="hero_img_logo">
+    <div class="hero_img_logo" ref="heroImgLogo">
       <img src="/img/logo.png" alt="logo of Grand Theft Auto VI">
     </div>
 
-    <div class="scroll_container">
+    <div class="scroll_container" ref="scrollCont">
       <div class="fill-pink size-8 rotate-180">
         <arrow/>
       </div>
     </div>
 
-    <div class="fade_overlay">
+    <div class="fade_overlay" ref="fadeOverlay">
       <img src="/img/mask.png" alt=""/>
     </div>
 
-    <div class="overlay">
-      <rect_svg/>
+    <div class="overlay" ref="logoOverlay">
+      <rect_svg :path="logoData"/>
     </div>
 
-    <div class="logo_container"></div>
+    <div class="logo_container" ref="logoContainer"></div>
 
-    <div class="content_overlay">
+    <div class="content_overlay" ref="outro">
       <div class="logo_overlay">
         <img src="/img/vi_logo.webp" alt=""/>
       </div>
@@ -148,6 +168,10 @@ import Xbox_logo from "assets/xbox_logo.vue";
   -webkit-background-clip: text;
   color: transparent;
   transform-origin: center;
+}
+
+.logo_overlay img {
+  display: none;
 }
 
 .outro {
